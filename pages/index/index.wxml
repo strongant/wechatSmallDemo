@@ -1,0 +1,31 @@
+<view class='container'>
+<view  bindtap="bindViewTap" class="userinfo">
+<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <modal title="查询结果" confirm-text="confirm" cancel-text="cancel" hidden="{{modalHidden}}" bindconfirm="modalChange" bindcancel="modalChange">
+  这是加载到的内容:{{content}}
+</modal>
+  <view>
+  <button bindtap="loadSomeData">点击获取数据</button>
+
+  <button bindtap="getMyLocaiton">获取我的位置</button>
+  <button bindtap='getSystemInfo'>获取当前手机信息</button>
+   <button bindtap='startVideo'>选择图片</button>
+
+   <image ng-if='loadImage' class="userinfo-avatar" src="{{imageUrl}}" background-size="cover"></image>
+  
+  </view>
+<view>
+<button bindtap='startMusic'>播放音乐</button>
+  <button bindtap="bindButtonTap">获取视频</button>
+<video src="{{src}}"></video></view>
+
+<view>
+
+</view>
+    
+</view>
